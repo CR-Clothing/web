@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CR Clothing - Product Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">CR Clothing</h1>
+            <div class="space-x-4">
+                <a href="index.html" class="text-gray-600">Home</a>
+                <a href="collection.html" class="text-gray-600">Collection</a>
+                <a href="offers.html" class="text-gray-600">Seasonal Offers</a>
+                <a href="about.html" class="text-gray-600">About Us</a>
+                <a href="contact.html" class="text-gray-600">Contact Us</a>
+                <a href="gallery.html" class="text-gray-600">Gallery</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details Section -->
+    <section class="container mx-auto py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+                <img id="product-image" class="w-full h-96 object-cover rounded" alt="Product Image">
+            </div>
+            <div>
+                <h2 id="product-name" class="text-3xl font-bold text-gray-800"></h2>
+                <p id="product-description" class="text-gray-600 mt-4"></p>
+                <p class="mt-2"><strong>Available Sizes:</strong> <span id="product-sizes"></span></p>
+                <p class="mt-2"><strong>Color:</strong> <span id="product-color"></span></p>
+                <p class="mt-2"><strong>Material:</strong> <span id="product-material"></span></p>
+                <p class="mt-2 text-xl text-red-600 font-bold">Price: $<span id="product-price"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+        <p>&copy; 2025 CR Clothing. All Rights Reserved.</p>
+        <p>Follow us on <a href="#" class="text-blue-400">Social Media</a></p>
+    </footer>
+
+    <script>
+        // Fetch product details from JSON
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        fetch('products.json')
+            .then(response => response.json())
+            .then(products => {
+                const product = products.find(p => p.id == productId);
+                if (product) {
+                    document.getElementById('product-image').src = product.image;
+                    document.getElementById('product-name').textContent = product.name;
+                    document.getElementById('product-description').textContent = product.description;
+                    document.getElementById('product-sizes').textContent = product.sizes.join(', ');
+                    document.getElementById('product-color').textContent = product.color;
+                    document.getElementById('product-material').textContent = product.material;
+                    document.getElementById('product-price').textContent = product.price;
+                }
+            });
+    </script>
+</body>
+
+</html>

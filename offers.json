@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "name": "Summer Sale",
+    "description": "Get up to 50% off on selected summer collection items.",
+    "discount_percentage": 50,
+    "start_date": "2025-06-01",
+    "end_date": "2025-06-30",
+    "applicable_products": [
+      "Classic Black T-Shirt",
+      "Red Casual Shirt",
+      "Summer Floral Dress"
+    ],
+    "image_url": "https://cr-clothing.com/images/offers/summer_sale.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Winter Clearance",
+    "description": "Clearance sale! Enjoy up to 70% off on winter clothing.",
+    "discount_percentage": 70,
+    "start_date": "2025-12-01",
+    "end_date": "2025-12-31",
+    "applicable_products": [
+      "Leather Jacket",
+      "Blue Denim Jeans"
+    ],
+    "image_url": "https://cr-clothing.com/images/offers/winter_clearance.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Buy One Get One Free",
+    "description": "Buy one item from the 'Casual Wear' collection and get another item for free!",
+    "discount_percentage": 100,
+    "start_date": "2025-05-01",
+    "end_date": "2025-05-31",
+    "applicable_products": [
+      "Classic Black T-Shirt",
+      "Red Casual Shirt"
+    ],
+    "image_url": "https://cr-clothing.com/images/offers/bogo_offer.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Flash Sale",
+    "description": "Limited time offer! 30% off on all new arrivals, only for today.",
+    "discount_percentage": 30,
+    "start_date": "2025-02-04",
+    "end_date": "2025-02-04",
+    "applicable_products": [
+      "Summer Floral Dress",
+      "Leather Jacket"
+    ],
+    "image_url": "https://cr-clothing.com/images/offers/flash_sale.jpg"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Black T-Shirt",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Black", "White"],
+    "materials": ["Cotton", "Polyester"],
+    "description": "A comfortable and stylish classic black T-shirt for everyday wear.",
+    "price": 19.99,
+    "image_urls": [
+      "https://cr-clothing.com/images/products/black_tshirt_1.jpg",
+      "https://cr-clothing.com/images/products/black_tshirt_2.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Red Casual Shirt",
+    "sizes": ["M", "L", "XL"],
+    "colors": ["Red", "Blue"],
+    "materials": ["Cotton"],
+    "description": "A smart casual shirt perfect for a day out or casual meetings.",
+    "price": 29.99,
+    "image_urls": [
+      "https://cr-clothing.com/images/products/red_shirt_1.jpg",
+      "https://cr-clothing.com/images/products/red_shirt_2.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Summer Floral Dress",
+    "sizes": ["S", "M", "L"],
+    "colors": ["Floral Print", "Pink", "Yellow"],
+    "materials": ["Silk", "Cotton"],
+    "description": "A beautiful floral print dress, perfect for a summer day or evening out.",
+    "price": 49.99,
+    "image_urls": [
+      "https://cr-clothing.com/images/products/floral_dress_1.jpg",
+      "https://cr-clothing.com/images/products/floral_dress_2.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Blue Denim Jeans",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Blue"],
+    "materials": ["Denim"],
+    "description": "A pair of trendy and durable blue denim jeans for a casual look.",
+    "price": 39.99,
+    "image_urls": [
+      "https://cr-clothing.com/images/products/denim_jeans_1.jpg",
+      "https://cr-clothing.com/images/products/denim_jeans_2.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Leather Jacket",
+    "sizes": ["M", "L", "XL"],
+    "colors": ["Black", "Brown"],
+    "materials": ["Leather"],
+    "description": "A stylish leather jacket to complement your winter wardrobe.",
+    "price": 89.99,
+    "image_urls": [
+      "https://cr-clothing.com/images/products/leather_jacket_1.jpg",
+      "https://cr-clothing.com/images/products/leather_jacket_2.jpg"
+    ]
+  }
+]

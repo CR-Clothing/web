@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CR Clothing - Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">CR Clothing</h1>
+            <div class="space-x-4">
+                <a href="index.html" class="text-gray-600">Home</a>
+                <a href="collection.html" class="text-gray-600 font-bold">Collection</a>
+                <a href="offers.html" class="text-gray-600">Seasonal Offers</a>
+                <a href="about.html" class="text-gray-600">About Us</a>
+                <a href="contact.html" class="text-gray-600">Contact Us</a>
+                <a href="gallery.html" class="text-gray-600">Gallery</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Collection Header -->
+    <header class="bg-blue-600 text-white text-center py-16">
+        <h2 class="text-4xl font-bold">Our Clothing Collection</h2>
+        <p class="text-lg mt-2">Explore our latest fashion trends and best-selling items</p>
+    </header>
+
+    <!-- Collection Items -->
+    <section class="container mx-auto py-10">
+        <h2 class="text-2xl font-bold text-center">Shop the Collection</h2>
+        <div id="collection-list" class="grid grid-cols-3 gap-6 mt-6">
+            <!-- Collection items will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+        <p>&copy; 2025 CR Clothing. All Rights Reserved.</p>
+        <p>Follow us on <a href="#" class="text-blue-400">Social Media</a></p>
+    </footer>
+
+    <script>
+        // Load collection products from JSON
+        fetch('products.json')
+            .then(response => response.json())
+            .then(products => {
+                const collectionList = document.getElementById('collection-list');
+                products.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.classList.add('bg-white', 'p-4', 'shadow-md', 'rounded');
+                    productCard.innerHTML = `
+                        <img src="${product.image}" class="w-full h-48 object-cover rounded" alt="${product.name}">
+                        <h3 class="mt-2 text-lg font-semibold">${product.name}</h3>
+                        <p class="text-gray-600">$${product.price}</p>
+                        <a href="product.html?id=${product.id}" class="mt-2 block bg-blue-600 text-white px-4 py-2 rounded text-center">View Details</a>
+                    `;
+                    collectionList.appendChild(productCard);
+                });
+            });
+    </script>
+</body>
+
+</html>
