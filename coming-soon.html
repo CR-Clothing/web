@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - CR Clothing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+
+    <div class="text-center px-6">
+        <h1 class="text-5xl font-bold text-yellow-400 mb-4">CR Clothing</h1>
+        <p class="text-lg text-gray-300 mb-6">We're launching soon! Stay tuned for amazing fashion.</p>
+
+        <!-- Countdown Timer -->
+        <div id="countdown" class="text-3xl font-semibold text-yellow-300 mb-6"></div>
+
+        <!-- Social Media Links -->
+        <div class="flex justify-center space-x-6">
+            <a href="#" class="text-blue-400 text-2xl hover:text-blue-600">📘</a>
+            <a href="#" class="text-pink-400 text-2xl hover:text-pink-600">📷</a>
+            <a href="#" class="text-blue-500 text-2xl hover:text-blue-700">🐦</a>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer Script
+        function updateCountdown() {
+            const launchDate = new Date("2025-03-01T00:00:00").getTime();
+            const now = new Date().getTime();
+            const difference = launchDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerText =
+                    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                document.getElementById("countdown").innerText = "We're Live!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+
+</body>
+
+</html>
